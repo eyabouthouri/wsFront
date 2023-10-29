@@ -13,14 +13,15 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderbackComponent } from './backoffice/headerback/headerback.component';
 import { FooterbackComponent } from './backoffice/footerback/footerback.component';
 import { CommonModule } from '@angular/common';
+import { BackofficeModule } from './backoffice/backoffice.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,HeaderbackComponent,FooterbackComponent
+    FooterComponent,HeaderbackComponent,FooterbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FrontofficeModule,CommonModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FrontofficeModule,CommonModule,BackofficeModule],
   providers: [],
   bootstrap: [AppComponent]
 })

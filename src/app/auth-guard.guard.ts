@@ -15,9 +15,9 @@ export class AuthGuard implements CanActivate {
       let token = localStorage.getItem('Token');
       let role = localStorage.getItem('role')
       try {
-
+     /*
         if (token === null || helper.isTokenExpired(token)) {
-          this.router.navigate(['/login'])
+          //this.router.navigate(['/login'])
           return false
         }
         else{
@@ -25,7 +25,7 @@ export class AuthGuard implements CanActivate {
             this.router.navigate(['/frontoffice']);
             return false;
           }
-        }
+        }*/
         return true;
       } catch (err) {
         return false

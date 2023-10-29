@@ -19,7 +19,7 @@ import { ReclamationsAdminComponent } from './reclamations-admin/reclamations-ad
   imports: [
     CommonModule,
     BackofficeRoutingModule,
-    FormsModule, 
+    FormsModule,
     HttpClientModule,
     BackofficeRoutingModule
   ]

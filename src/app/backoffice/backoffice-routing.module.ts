@@ -6,7 +6,7 @@ import { ReclamationsAdminComponent } from './reclamations-admin/reclamations-ad
 
 const routes: Routes = [{ path: '', component: BackofficeComponent },
 
-{path:'adminrec',component:ReclamationsAdminComponent},
+           {path:'adminrec',component:ReclamationsAdminComponent},
 
 ];
 
