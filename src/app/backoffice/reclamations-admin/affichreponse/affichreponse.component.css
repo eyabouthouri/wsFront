@@ -1,0 +1,25 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* prend toute la hauteur de la fenêtre de visualisation */
+}
+
+.table-style {
+    width: 50%; /* vous pouvez ajuster la largeur selon vos préférences */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.table-style h2,
+.table-style p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.table-style p {
+    border: none; /* enlève la bordure du dernier élément */
+}

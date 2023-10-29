@@ -1,0 +1,50 @@
+<style>/* Container global pour le centrage vertical et horizontal */
+  /* CSS to center the form */
+.center-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* CSS to style the form container */
+.centered-form {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* CSS to make the table smaller */
+.centered-form .table {
+  width: 100%;
+  font-size: 12px;
+}
+
+    </style>
+<div class="center-form-container">
+    <form [formGroup]="reponseForm" (ngSubmit)="onSubmit()" class="centered-form">
+
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input type="text" class="form-control" id="title" formControlName="title" placeholder="Entrez le titre de la réponse">
+            <div *ngIf="reponseForm.controls['title'].invalid && (reponseForm.controls['title'].dirty || reponseForm.controls['title'].touched)" class="text-danger">
+                Le titre est requis.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" formControlName="description" rows="4" placeholder="Entrez la description de la réponse"></textarea>
+            <div *ngIf="reponseForm.controls['description'].invalid && (reponseForm.controls['description'].dirty || reponseForm.controls['description'].touched)" class="text-danger"> 
+                La description est requise.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="reponseForm.invalid">Ajouter une réponse</button>
+
+    </form>
+</div>
