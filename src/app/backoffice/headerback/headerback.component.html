@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+            <div class="logo-section d-flex align-items-center">
+                <i class="bi bi-list toggle-sidebar-btn" style="font-size: 24px; color: #fff;"></i>
+            </div>
+
+            <nav class="header-nav ms-auto">
+                <ul class="nav-items d-flex align-items-center">
+                    <!-- Placeholder for nav items -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <aside id="sidebar" class="sidebar sidebarr">
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <br><br><br>
+            <!-- Formations Section -->
+            
+           
+            <!-- Reclamations Section -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/backoffice/nontraitees">
+                    <i class="bi bi-menu-button-wide"></i><span>Réclamations</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <!-- ======= Styles ======= -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #001528;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-items li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .nav-items li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebarr {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #001528;
+            z-index: 2;
+            overflow-y: auto;
+            border-right: 1px solid #34495e;
+        }
+
+        .sidebar-nav li {
+            list-style-type: none;
+            border-bottom: 1px solid #34495e;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #34495e;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: #34495e;
+            color: #ffffff;
+        }
+
+        .sidebar-nav a .bi {
+            margin-right: 10px;
+        }
+
+        .nav-content {
+            padding-left: 30px;
+        }
+
+    </style>
+
+</body>
+
+</html>
