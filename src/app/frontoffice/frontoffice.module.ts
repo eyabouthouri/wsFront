@@ -7,15 +7,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
 import { MedecinsComponent } from './medecins/medecins.component';
+
+import { ArticleComponent } from './article/article.component';
+
 import { ProduitComponent } from './produit/produit.component';
 import { AddproduitComponent } from '../backoffice/addproduit/addproduit.component';
+
 
 @NgModule({
   declarations: [
     FrontofficeComponent,
     MedecinsComponent,
+
+    ArticleComponent,
+
     ProduitComponent,
     AddproduitComponent,
+
   ],
   imports: [
     CommonModule,

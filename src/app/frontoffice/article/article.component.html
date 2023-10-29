@@ -1,0 +1,40 @@
+<section id="doctors" class="doctors">
+    <div class="container">
+      <div class="section-title">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Articles</h2>
+  
+        <form class="">
+          <div class="form-group mt-6 d-flex align-items-center">
+            <input type="text" class="form-control" name="searchText" placeholder="Rechercher des articles" >
+            <span>&nbsp; &nbsp;</span>
+            <button type="submit" class="btn btn-primary ml-2" >Filtrer</button>
+          </div>
+        </form>
+      </div>
+  
+      <div class="row">
+        <div *ngFor="let item of articles" class="col-lg-6">
+          <div class="member d-flex align-items-start mb-4">
+            <div class="pic">
+              <img src="assets/img/departments-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="member-info ml-3">
+              <h4>{{item.title}}</h4>
+              <p><strong>Contenu:</strong> {{item.contenu}}</p>
+              <br><br>
+              <div class="comment-section mt-3">
+                <h4>Ajouter un commentaire :</h4>
+                <textarea class="form-control" rows="4" placeholder="Votre commentaire..."></textarea>
+                <button class="btn btn-primary mt-2">Publier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
