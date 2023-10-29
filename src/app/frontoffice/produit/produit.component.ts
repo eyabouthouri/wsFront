@@ -11,6 +11,8 @@ export class ProduitComponent implements OnInit {
   constructor(private serviceProduit:ServiceProduit) { }
    listproduit:any
    searchavalue:any
+   idproduit:any
+  addModal?:boolean=false;
   ngOnInit(): void {
     this.serviceProduit.getAllproduitnonperime().subscribe(data=>{
       this.listproduit=data
@@ -20,6 +22,12 @@ export class ProduitComponent implements OnInit {
     this.serviceProduit.getProductByName(this.searchavalue).subscribe(data=>{
       this.listproduit=data
     })
+
   }
+  openModal(id:any){
+    this.addModal=true;
+     this.idproduit=id
+    console.log(this.addModal)
+   }
 
 }

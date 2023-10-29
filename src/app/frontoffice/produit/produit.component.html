@@ -35,8 +35,11 @@
             <br>
 <br>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary">Commander</button>
+            <button  type="submit" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-primary" (click)="openModal(item.id)">Commander</button>
+
           </div>
+        <app-commande [idFormation]="idproduit" *ngIf="openModal"></app-commande>
+
         </div>
 
         </div>

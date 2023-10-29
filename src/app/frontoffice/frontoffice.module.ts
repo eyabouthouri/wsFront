@@ -12,6 +12,7 @@ import { ArticleComponent } from './article/article.component';
 
 import { ProduitComponent } from './produit/produit.component';
 import { AddproduitComponent } from '../backoffice/addproduit/addproduit.component';
+import { CommandeComponent } from './commande/commande.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AddproduitComponent } from '../backoffice/addproduit/addproduit.compone
 
     ProduitComponent,
     AddproduitComponent,
+    CommandeComponent,
 
   ],
   imports: [
