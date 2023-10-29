@@ -26,4 +26,5 @@ export class ServiceProduit {
     return this.http.post(`${this.baseUrl}/add`,produit)
   }
 
+
 }

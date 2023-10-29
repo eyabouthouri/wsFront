@@ -1,0 +1,45 @@
+<main>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Incription</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" *ngIf="inscriptiontermine == false" >
+
+          <form #f="ngForm" (ngSubmit)="commander(f.value)" class="container mt-4">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" class="form-control" placeholder="Votre nom" ngModel>
+            </div> <!-- form-group -->
+
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" class="form-control" placeholder="Votre prénom" ngModel>
+            </div> <!-- form-group -->
+
+             <!-- form-group -->
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Commander</button>
+            </div> <!-- form-group -->
+        </form>
+
+        </div>
+
+        <div class="modal-body" *ngIf="inscriptiontermine == true">
+          <div class="success-message">
+            <img src="assets/images/sucess.png" width="200" height="200" />
+              <p>Merci pour votre inscription !</p>
+          </div>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</main>

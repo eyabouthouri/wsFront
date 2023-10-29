@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { ReclamationsAdminComponent } from './reclamations-admin/reclamations-admin.component';
 import { ProduitbackComponent } from './produitback/produitback.component';
 import { AffichreponseComponent } from './reclamations-admin/affichreponse/affichreponse.component';
+import { CommandebackComponent } from './commandeback/commandeback.component';
 
 
 
@@ -18,7 +19,8 @@ import { AffichreponseComponent } from './reclamations-admin/affichreponse/affic
     BackofficeComponent,
     ReclamationsAdminComponent,
     ProduitbackComponent,
-    AffichreponseComponent
+    AffichreponseComponent,
+    CommandebackComponent
   ],
   imports: [
     CommonModule,
