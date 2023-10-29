@@ -1,4 +1,29 @@
+<style>
+  /* Define the styles for the custom button */
+  .custom-button {
+    background-color: #007bff; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show a hand cursor on hover */
+    font-size: 16px; /* Font size */
+  }
+
+  /* Style the button on hover */
+  .custom-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+
+  /* Style the button on active (when clicked) */
+  .custom-button:active {
+    background-color: #003f80; /* Even darker background color on click */
+  }
+</style>
 <section id="doctors" class="doctors">
+  <br /><br />
+  <br /><br />
+
   <div class="container">
     <div class="section-title">
       <h2>Doctors</h2>
@@ -11,98 +36,34 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6" *ngFor="let doctor of medecins">
         <div class="member d-flex align-items-start">
           <div class="pic">
-            <img
-              src="assets/img/doctors/doctors-1.jpg"
-              class="img-fluid"
-              alt=""
-            />
+            <img class="img-fluid" alt="" />
           </div>
           <div class="member-info">
-            <h4>Walter White</h4>
-            <span>Chief Medical Officer</span>
-            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+            <h4>{{ doctor.prenom }} {{ doctor.nom }}</h4>
+            <span>{{ doctor.specialite }}</span>
+            <p>{{ doctor.adresse }}</p>
             <div class="social">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+              {{ doctor.tel }}
             </div>
-          </div>
-        </div>
-      </div>
+            <br /><br />
 
-      <div class="col-lg-6 mt-4 mt-lg-0">
-        <div class="member d-flex align-items-start">
-          <div class="pic">
-            <img
-              src="assets/img/doctors/doctors-2.jpg"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div class="member-info">
-            <h4>Sarah Jhonson</h4>
-            <span>Anesthesiologist</span>
-            <p>
-              Aut maiores voluptates amet et quis praesentium qui senda para
-            </p>
-            <div class="social">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mt-4">
-        <div class="member d-flex align-items-start">
-          <div class="pic">
-            <img
-              src="assets/img/doctors/doctors-3.jpg"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div class="member-info">
-            <h4>William Anderson</h4>
-            <span>Cardiology</span>
-            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-            <div class="social">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mt-4">
-        <div class="member d-flex align-items-start">
-          <div class="pic">
-            <img
-              src="assets/img/doctors/doctors-4.jpg"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div class="member-info">
-            <h4>Amanda Jepson</h4>
-            <span>Neurosurgeon</span>
-            <p>
-              Dolorum tempora officiis odit laborum officiis et et accusamus
-            </p>
-            <div class="social">
-              <a href=""><i class="ri-twitter-fill"></i></a>
-              <a href=""><i class="ri-facebook-fill"></i></a>
-              <a href=""><i class="ri-instagram-fill"></i></a>
-              <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-            </div>
+            <button
+              type="submit"
+              class="custom-button"
+              [routerLink]="['/frontoffice/rdv/', doctor.medecinId]"
+            >
+              Make an Appointment
+            </button>
+            <button
+              type="submit"
+              class="custom-button"
+              [routerLink]="['/frontoffice/listrdv/', doctor.medecinId]"
+            >
+              List appointments
+            </button>
           </div>
         </div>
       </div>
