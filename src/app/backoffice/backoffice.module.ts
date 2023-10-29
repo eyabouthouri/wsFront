@@ -8,13 +8,15 @@ import { BackofficeComponent } from './backoffice.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReclamationsAdminComponent } from './reclamations-admin/reclamations-admin.component';
+import { ProduitbackComponent } from './produitback/produitback.component';
 
 
 
 @NgModule({
   declarations: [
     BackofficeComponent,
-    ReclamationsAdminComponent
+    ReclamationsAdminComponent,
+    ProduitbackComponent
   ],
   imports: [
     CommonModule,
