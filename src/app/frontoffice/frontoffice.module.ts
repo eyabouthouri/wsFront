@@ -6,10 +6,12 @@ import { FrontofficeComponent } from './frontoffice.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReclamationsComponent } from './reclamations/reclamations.component';
+import { MedecinsComponent } from './medecins/medecins.component';
 
 @NgModule({
   declarations: [
     FrontofficeComponent,
+    MedecinsComponent,
   ],
   imports: [
     CommonModule,
