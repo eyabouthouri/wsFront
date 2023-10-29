@@ -28,8 +28,29 @@
         <ul class="sidebar-nav" id="sidebar-nav">
           <br><br><br>
             <!-- Formations Section -->
-            
-           
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Formations</span>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li><a routerLink="/backoffice/produit"><i class="bi bi-circle"></i><span>list Produit</span></a></li>
+                    <li><a routerLink="/backoffice/addproduit"><i class="bi bi-circle"></i><span>add produit</span></a></li>
+                </ul>
+            </li>
+
+            <!-- Projects Section -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/backoffice/projetback">
+                    <i class="bi bi-menu-button-wide"></i><span>Projets</span>
+                </a>
+            </li>
+            <!-- Events Section -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/backoffice/adminevent">
+                    <i class="bi bi-menu-button-wide"></i><span>Events</span>
+                </a>
+            </li>
             <!-- Reclamations Section -->
             <li class="nav-item">
                 <a class="nav-link" routerLink="/backoffice/nontraitees">
