@@ -1,1 +1,93 @@
-<h1>hhhhh</h1>
+<style>
+  /* CSS to center the form */
+  .center-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  /* CSS to style the form container */
+  .centered-form {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* CSS to make the table smaller */
+  .centered-form table {
+    width: 80%; /* Adjust the width as needed */
+    font-size: 12px; /* Adjust the font size to make it smaller */
+  }
+
+  /* Center the table header text */
+  .centered-form th p {
+    text-align: center;
+  }
+
+  /* Center the table cell text */
+  .centered-form td p {
+    text-align: center;
+  }
+  .centered-form td, .centered-form th {
+    padding: 9px 8px; /* Reduced padding */
+  }
+
+  /* Adjusting style for the search box */
+  .search-box {
+    margin-bottom: 20px;
+    text-align: center; /* To center the search box elements */
+  }
+  .centered-form {
+  /* ... existing styles ... */
+  margin-right: 10%; /* This will push the content slightly to the left */
+}
+
+</style>
+<br><br><br><br>
+<div class="center-form-container">
+  <div class="centered-form">
+    <div class="search-box">
+      <input type="text" [(ngModel)]="searchTitle" placeholder="Rechercher par titre...">
+      <button (click)="searchReclamations(searchTitle)">Rechercher</button>
+    </div>
+    <table class="table">
+    <thead>
+      <tr>
+        <th class="name"><p>Titre</p></th>
+        <th class="contract"><p>Date Soumission</p></th>
+        <th class="keywords"><p>Description</p></th>
+        <th class="action"><p>Action</p></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of reclamations">
+        <td class="name">
+          <div class="job_alert_name">
+            <h5 class="job_name">{{ item.title }}</h5>
+          </div>
+        </td>
+        <td class="contract">
+          <p>
+            <i class="fa fa-clock-o"></i>
+            {{ item.dateSoumission }}
+          </p>
+        </td>
+       
+        <td class="keywords" style="padding: 10px">
+          <p>{{ item.description }}</p>
+        </td>
+        <td class="action">
+          <button class="btn btn-secondary" [routerLink]="['/backoffice/reponse', item.id]">Répondre</button>
+        </td>
+        <td class="action">
+          <button class="btn btn-secondary" [routerLink]="['/backoffice/afff', item.id]">voir reponse</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Reclamation } from '../model/reclamation';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,15 @@ export class ReclamationService {
   getAllReclamations(): Observable<any> {
     
     return this.http.get(`${this.baseUrl}/all`);
+  }
+  searchByTitle(title: string): Observable<any[]> {
+    return this.http.get<Reclamation[]>(`${this.baseUrl}/search/${title}`);
+  }
+  sortReclamationsByDateAsc(): Observable<Reclamation[]> {
+    return this.http.get<Reclamation[]>(`${this.baseUrl}/sortc`);
+  }
+  addReclamation(reclamation: Reclamation): Observable<any> {
+    return this.http.post(`${this.baseUrl}/add`, reclamation);
   }
 /*
   getReclamationsTraitees(): Observable<any> {
