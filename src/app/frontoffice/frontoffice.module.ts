@@ -10,12 +10,24 @@ import { MedecinsComponent } from './medecins/medecins.component';
 import { AddrdvComponent } from './addrdv/addrdv.component';
 import { ListrdvComponent } from './listrdv/listrdv.component';
 
+import { ArticleComponent } from './article/article.component';
+
+import { ProduitComponent } from './produit/produit.component';
+import { AddproduitComponent } from '../backoffice/addproduit/addproduit.component';
+
+
 @NgModule({
   declarations: [
     FrontofficeComponent,
     MedecinsComponent,
     AddrdvComponent,
     ListrdvComponent,
+
+    ArticleComponent,
+
+    ProduitComponent,
+    AddproduitComponent,
+
   ],
   imports: [
     CommonModule,
