@@ -1,0 +1,45 @@
+<!-- reclamation.component.html -->
+
+<br>
+<br>
+<br>
+
+<section class="section content">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-3">
+      <!-- Décalage de 2 colonnes (10 colonnes de contenu + 2 colonnes de décalage) -->
+      <div class="card-body">
+        <div
+          class="datatable-wrapper datatable-loading no-footer sortable searchable"
+        ></div>
+        <div class="datatable-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>image</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listproduit">
+                <td>{{ item.nom }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.dateperemption | date: 'yyyy-MM-dd' }}</td>
+                <td><img src="assets/img/doctors/doctors-1.jpg" width="50"
+height="50"                  alt="" ></td>
+                <td>
+                  <button class="btn btn-danger" type="button">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
