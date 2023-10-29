@@ -15,4 +15,8 @@ export class ArticleService {
     return this.http.get(`${this.baseUrl}/all`);
   }
 
+  addarticle(article:any){
+    return this.http.post(`${this.baseUrl}/add`,article)
+  }
+
 }
