@@ -16,9 +16,17 @@ export class RendezVousService {
     
     return this.http.get(`${this.baseUrl}/all/`+id);
   }
+  getExistingDatesForMedecin(id: String): Observable<any> {
+    return this.http.get(`${this.baseUrl}/existingdates/`+id);
+
+  }
+    
   create(id: String, rdv:RendezVous)  {
     
     return this.http.post(`${this.baseUrl}/ad/`+id, rdv);
+  }
+  deleteRdv(id:String){
+    return this.http.delete(`${this.baseUrl}/delete/${id}`);
   }
 /*
   getReclamationsTraitees(): Observable<any> {
@@ -29,9 +37,6 @@ export class RendezVousService {
     return this.http.get(`${this.baseUrl}/getReclamationsNonTraitees`);
   }
 
-  deleteReclamation(id:number){
-    return this.http.delete(`${this.baseUrl}/deleteReclamation/${id}`);
-  }
 
   addReclamation(formData:FormData, pieceJointe: File) {
     const params = new HttpParams().set('pieceJointe', pieceJointe ? pieceJointe.name : '');

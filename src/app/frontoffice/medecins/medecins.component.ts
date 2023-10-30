@@ -8,8 +8,8 @@ import { Medecin } from 'src/app/model/medecin';
   styleUrls: ['./medecins.component.css']
 })
 export class MedecinsComponent implements OnInit {
-
-  medecins: Medecin[];
+searchNom: String;
+  medecins: any[];
   constructor(private medecinService: MedecinService) { }
 
   ngOnInit(): void {
@@ -19,5 +19,16 @@ export class MedecinsComponent implements OnInit {
     });
 
   }
+  searchMedecins(nom: String): void {
+    if (nom.trim() === '' || this.searchNom === '') {
+      this.medecinService.getAllMedecins().subscribe((data: any[]) => {
+        this.medecins = data;
+  })} else {  
+    this.medecinService.searchByNom(nom).subscribe(
+      data => this.medecins = data,
 
+    );
+
+  }
+  }
 }
