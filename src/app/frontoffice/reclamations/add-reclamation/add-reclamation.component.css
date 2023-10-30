@@ -1,0 +1,67 @@
+/* Styles généraux pour la section */
+.contact_area {
+    background-color: #f9f9f9;  /* couleur d'arrière-plan légère pour la section */
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 15px;
+}
+
+.contact_title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styles pour le formulaire */
+.contact_form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Ombre douce pour le conteneur du formulaire */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fdfdfd;  /* couleur d'arrière-plan légère pour les champs du formulaire */
+    transition: border-color 0.3s;  /* transition douce lors du focus */
+}
+
+.form-control:focus {
+    border-color: #007bff;  /* couleur de bordure lors du focus */
+    outline: none;  /* retirer l'outline par défaut lors du focus */
+    box-shadow: none;  /* retirer le box-shadow par défaut lors du focus */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;  /* transition douce lors du survol */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;  /* couleur d'arrière-plan lors du survol */
+}

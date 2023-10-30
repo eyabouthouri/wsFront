@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SuccesComponent } from './succes/succes.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReclamationsComponent,
     ListReclamationsComponent,
     AddReclamationComponent,
+    SuccesComponent,
 
   ],
   imports: [
