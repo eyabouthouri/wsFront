@@ -11,6 +11,8 @@ import { ReclamationsAdminComponent } from './reclamations-admin/reclamations-ad
 import { ProduitbackComponent } from './produitback/produitback.component';
 import { AffichreponseComponent } from './reclamations-admin/affichreponse/affichreponse.component';
 import { CommandebackComponent } from './commandeback/commandeback.component';
+import { AddarticleComponent } from './addarticle/addarticle.component';
+import { ArticleslistComponent } from './articleslist/articleslist.component';
 
 
 
@@ -20,7 +22,9 @@ import { CommandebackComponent } from './commandeback/commandeback.component';
     ReclamationsAdminComponent,
     ProduitbackComponent,
     AffichreponseComponent,
-    CommandebackComponent
+    CommandebackComponent,
+    AddarticleComponent,
+    ArticleslistComponent
   ],
   imports: [
     CommonModule,

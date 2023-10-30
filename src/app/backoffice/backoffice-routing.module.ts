@@ -8,6 +8,8 @@ import { AddproduitComponent } from './addproduit/addproduit.component';
 import { AffichreponseComponent } from './reclamations-admin/affichreponse/affichreponse.component';
 import { ReponseComponent } from './reclamations-admin/reponse/reponse.component';
 import { CommandebackComponent } from './commandeback/commandeback.component';
+import { ArticleslistComponent } from './articleslist/articleslist.component';
+import { AddarticleComponent } from './addarticle/addarticle.component';
 
 
 const routes: Routes = [{ path: '', component: BackofficeComponent },
@@ -16,7 +18,9 @@ const routes: Routes = [{ path: '', component: BackofficeComponent },
            {path:"addproduct",component:AddproduitComponent},
            { path: 'reponse/:id', component: ReponseComponent },
            { path: 'afff/:id', component: AffichreponseComponent },
-           { path: 'commande', component: CommandebackComponent }
+           { path: 'commande', component: CommandebackComponent },
+           {path:'listarticles',component:ArticleslistComponent},
+           {path:"addarticle",component:AddarticleComponent},
 
 ];
 

@@ -15,4 +15,13 @@ export class ArticleService {
     return this.http.get(`${this.baseUrl}/all`);
   }
 
+  getbytitle(title:string):Observable<any>{
+    return this.http.get(`${this.baseUrl}/get/`+title);
+
+  }
+
+  addarticle(article:any){
+    return this.http.post(`${this.baseUrl}/add`,article)
+  }
+
 }

@@ -2,15 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/Service/article.service';
 
 @Component({
-  selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  selector: 'app-articleslist',
+  templateUrl: './articleslist.component.html',
+  styleUrls: ['./articleslist.component.css']
 })
-export class ArticleComponent implements OnInit {
-
+export class ArticleslistComponent implements OnInit {
   articles: any[];
-  searchavalue:any
-
 
   constructor(private articleService: ArticleService) { }
 
@@ -19,11 +16,5 @@ export class ArticleComponent implements OnInit {
       this.articles = data;
     });
   }
-  filtrer(){
-    this.articleService.getbytitle(this.searchavalue).subscribe(data=>{
-      this.articles=data
-    })
-  }
-
 
 }
