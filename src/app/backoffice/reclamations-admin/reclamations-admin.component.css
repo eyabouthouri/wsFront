@@ -1,0 +1,70 @@
+.center-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  .centered-form {
+    width: 750px; /* fixed width */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-right: 10%; /* To push the content slightly to the left */
+  }
+
+  .centered-form table {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .centered-form th p,
+  .centered-form td p {
+    text-align: center;
+  }
+
+  .centered-form td,
+  .centered-form th {
+    padding: 9px 8px;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .centered-form {
+  width: 650px; /* Augmentation de la largeur fixe */
+  /* ... autres styles ... */
+}
+
+.centered-form table {
+  width: 100%; /* Utilisation de toute la largeur disponible */
+  border-collapse: collapse; /* Pour avoir des bordures nettes */
+}
+
+.centered-form th, .centered-form td {
+  border: 1px solid #e0e0e0; /* Ajout de bordures aux cellules */
+  padding: 12px 10px;
+}
+
+.centered-form th {
+  background-color: #2C3E50; /* Couleur d'arrière-plan foncé pour l'en-tête */
+  color: #FFFFFF; /* Texte blanc pour l'en-tête */
+}
+
+.centered-form td {
+  background-color: #F4F6F6; /* Une légère couleur d'arrière-plan pour les cellules */
+}
+
+.centered-form .btn-secondary {
+  background-color: #3498DB; /* Une couleur bleue pour les boutons */
+  color: #FFFFFF; /* Texte blanc pour les boutons */
+  border: none;
+  transition: background-color 0.3s; /* Transition pour un effet de survol doux */
+}
+
+.centered-form .btn-secondary:hover {
+  background-color: #2980B9; /* Une teinte bleue plus foncée lors du survol */
+}

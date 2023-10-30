@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReponseService } from 'src/app/Service/reponse.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reponse',
@@ -15,12 +16,12 @@ export class ReponseComponent implements OnInit {
   constructor(
     private reponseService: ReponseService,
     private activatedRoute: ActivatedRoute,
-    private formBuilder: FormBuilder
-  ) {}
+    private formBuilder: FormBuilder,
+    private router: Router) { }
 
   ngOnInit(): void {
     const fullReclamationId = this.activatedRoute.snapshot.paramMap.get('id');
-    // Supprimez la partie jusqu'à '4' inclus et commencez juste après
+    // Supprimez la partie jusqu'isà '4' inclus et commencez juste après
     this.reclamationId = fullReclamationId.substring(fullReclamationId.indexOf('4') + 1);
     this.reponseForm = this.formBuilder.group({
       title: ['', Validators.required],
@@ -32,11 +33,15 @@ export class ReponseComponent implements OnInit {
 
 
   onSubmit() {
+    
     if (this.reponseForm.valid) {
+
       this.reponseService.addReponseToReclamation(this.reclamationId, this.reponseForm.value)
         .subscribe(response => {
           console.log('Reponse ajoutée avec succès !', response);
           // Redirigez ou affichez un message de succès si nécessaire
+          this.router.navigate(['/backoffice/afff', this.activatedRoute.snapshot.paramMap.get('id')]);
+
         }, error => {
           console.error('Erreur lors de l\'ajout de la reponse:', error);
         });

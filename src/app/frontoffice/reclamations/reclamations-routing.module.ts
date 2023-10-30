@@ -6,7 +6,7 @@ import { ListReclamationsComponent } from './list-reclamations/list-reclamations
 
 const routes: Routes = [{ path: '', component: ReclamationsComponent },
 { path: 'listreclamations', component: ListReclamationsComponent },
-{ path: 'addreclamation', component: AddReclamationComponent }
+{ path: 'addreclamation', component: AddReclamationComponent },
 
 ];
 
