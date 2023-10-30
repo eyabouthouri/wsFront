@@ -10,7 +10,8 @@ const routes: Routes = [{ path: '', component: BackofficeComponent },
 
            {path:'adminrec',component:ReclamationsAdminComponent},
            {path:'listarticles',component:ArticleslistComponent},
-           {path:"addarticle",component:ArticlesaddComponent}
+           {path:"addarticle",component:ArticlesaddComponent},
+           
 
 ];
 
