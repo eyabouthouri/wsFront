@@ -16,10 +16,6 @@ export class RendezVousService {
     
     return this.http.get(`${this.baseUrl}/all/`+id);
   }
-  getExistingDatesForMedecin(id: String): Observable<any> {
-    return this.http.get(`${this.baseUrl}/existingdates/`+id);
-
-  }
     
   create(id: String, rdv:RendezVous)  {
     
