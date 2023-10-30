@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Reclamation } from 'src/app/model/reclamation';
 import { ReclamationService } from 'src/app/Service/reclamation.service';
@@ -13,7 +13,7 @@ export class AddReclamationComponent implements OnInit {
 
   reclamationForm: FormGroup;  // Ajout du formulaire réactif
 
-  constructor(private fb: FormBuilder, private reclamationService: ReclamationService, private route: Router) { 
+  constructor(private fb: FormBuilder, private reclamationService: ReclamationService, private route: Router, private ngZone: NgZone) { 
     // Initialisation du formulaire
     this.reclamationForm = this.fb.group({
       title: ['', Validators.required],
@@ -25,21 +25,27 @@ export class AddReclamationComponent implements OnInit {
 
   onSubmit() {
     const formData = this.reclamationForm.value;
-    
     const newReclamation = new Reclamation();
     newReclamation.title = formData.title;
     newReclamation.description = formData.description;
-  
+
     this.reclamationService.addReclamation(newReclamation).subscribe(
       response => {
         console.log('Réponse du serveur :', response);
-        this.reclamationForm.reset();  // Réinitialiser le formulaire après soumission
+        alert('Réclamation ajoutée avec succès!');
+
+        this.reclamationForm.reset();
+
+        // Exécutez la navigation à l'intérieur de la zone Angular
+       
+     
       },
       error => {
         console.error('Erreur lors de l’ajout de la réclamation :', error);
       }
     );
   }
+
 
   // Supprimez le code commenté si vous ne l'utilisez pas
 }

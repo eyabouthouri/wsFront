@@ -6,7 +6,6 @@ export class Reclamation {
   etat: EtatReclamation;
   description: string;
   dateSoumission: Date;
-  reponse:Reponse
 }
 
 export enum EtatReclamation {

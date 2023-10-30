@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ReclamationsComponent,
     ListReclamationsComponent,
-    AddReclamationComponent,
+    AddReclamationComponent
 
   ],
   imports: [
